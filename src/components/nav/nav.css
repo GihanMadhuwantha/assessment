@@ -1,0 +1,119 @@
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 26px 80px;
+  background-color: #6b3cc9;
+  color: white;
+  font-weight: bolder;
+  height: 77px;
+}
+
+.logo img {
+  width: 200px;
+  margin-left: 20px;
+}
+
+.menu-items {
+  display: flex;
+  width: Fixed (1, 440px) px;
+  height: 60px;
+  padding: 26px 80px 26px 80px;
+  gap: 0px;
+  justify-content: space-between;
+  opacity: 0px;
+}
+
+.menu-items ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+.menu-items ul li {
+  margin-right: 20px;
+}
+
+.menu-items ul li a {
+  text-decoration: none; /* Remove underline */
+  color: white; /* Set link color */
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 16.94px;
+  text-transform: uppercase;
+  font-family: Inter;
+  text-align: left;
+}
+
+.burger-menu {
+  display: none; /* Hide initially for non-mobile views */
+}
+
+@media (max-width: 768px) {
+  .menu-items {
+    display: none; /* Hide menu items for mobile view */
+    flex-direction: column;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: #ffffff;
+    width: 100%;
+    height: 100vh; /* Full screen height */
+    padding-top: 60px; /* Adjust top padding according to your navbar height */
+    text-align: center;
+    transition: all 0.3s ease;
+    z-index: 999;
+  }
+
+  .menu-items.active {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .menu-items ul {
+    flex-direction: column;
+  }
+
+  .menu-items ul li {
+    margin: 20px 0;
+  }
+
+  .menu-items ul li a {
+    color: white; /* Set link color */
+  }
+
+  .burger-menu {
+    display: block; /* Show burger menu icon for mobile view */
+    cursor: pointer;
+    z-index: 1000;
+  }
+
+  .line {
+    width: 25px;
+    height: 3px;
+    background-color: white;
+    margin: 5px;
+  }
+  .mob-nav-links {
+    color: black !important;
+  }
+}
+
+.close-btn {
+  position: absolute;
+  top: 10px; /* Adjust position */
+  right: 10px; /* Adjust position */
+  background-color: transparent;
+  color: rgb(145, 60, 60);
+  border: none;
+  cursor: pointer;
+}
+
+/* Additional styles for the close button in mobile view */
+@media (min-width: 769px) {
+  .close-btn {
+    display: none;
+  }
+}

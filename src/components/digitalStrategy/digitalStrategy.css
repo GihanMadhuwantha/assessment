@@ -1,0 +1,81 @@
+
+.container-dig {
+  background-color: rgb(255, 255, 255);
+  width: 80%;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding-bottom: 5%;
+}
+
+.sub-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.text-section {
+  width: 100%;
+  max-width: 600px; 
+  text-align: left;
+  margin-bottom: 20px; 
+}
+
+.image {
+  width: 100%;
+  max-width: 600px; 
+}
+
+.learn-more-btn {
+  color: white;
+  background-color: #f28d35;
+  border: none;
+  text-transform: uppercase;
+  width: 150px;
+  height: 40px; 
+  padding: 10px 20px; 
+  border-radius: 4px;
+}
+
+.title {
+  font-family: Poppins;
+  font-size: 27px;
+  font-weight: 600;
+  line-height: 33px;
+  letter-spacing: 0.4px;
+  text-align: left;
+  color: rgba(107, 60, 201, 1);
+}
+
+@media screen and (max-width: 1440px) {
+  .container-dig {
+    width: 90%; 
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .container-dig {
+    width: 95%; 
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .container-dig {
+    width: 100%; 
+    padding: 0 20px;
+  }
+
+  .sub-container {
+    flex-direction: column; 
+    align-items: center; 
+  }
+}
+
+@media screen and (max-width: 375px) {
+  .title {
+    font-size: 22px; 
+    line-height: 28px; 
+  }
+}
